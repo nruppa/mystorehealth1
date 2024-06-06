@@ -1,0 +1,10 @@
+<p>params works!</p>
+<div class="grid1">
+    <div *ngFor="let image of images;let i =index" (click)="onclick(image)">
+        <span>
+            <img [src]="image.img" class="image" />
+            <br>
+            {{image.name}}
+        </span>
+    </div>
+</div>

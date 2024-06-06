@@ -1,0 +1,10 @@
+table {
+  width: 80%;
+  margin-left: 173px;
+  margin-top: 124px;
+  overflow-y: hidden;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}

@@ -1,0 +1,38 @@
+<div fxLayoutAlign="center center" fxFlexFill>
+    <mat-card fxFlex="25" class=" card example-card mat-elevation-z8" fxFlex.xs="83%" fxFlex.sm="35%" fxFlex.xl="35%">
+
+        <div class="mdiv" fxLayoutAlign="center center">
+            <img mat-card-image src="assets\homedepot.png" alt="Photo of a Shiba Inu">
+        </div>
+
+        <div>
+            <h1 class="font" fxLayoutAlign="center center"><b>THD Acoount Sign On</b></h1>
+        </div>
+        <form [formGroup]="login">
+            <div fxLayout="row" fxLayoutAlign="space-center center">
+                <div fxLayout="column" fxFlex>
+                    <mat-label>User Id<span>*</span></mat-label>
+                    <input type="text" formControlName="userId" placeholder="Enter your LDAP" />
+                </div>
+            </div>
+            <br>
+            <div fxLayout="row" fxLayoutAlign="space-center center">
+                <div fxLayout="column" fxFlex>
+                    <mat-label>Password<span>*</span></mat-label>
+                    <input type="text" formControlName="password" placeholder="Enter your password" />
+                </div>
+            </div>
+            <br>
+            <div  fxLayoutAlign="stretch" fxLayout="column">
+                <button mat-raised-button (click)="signin(login.value)" style="background-color:rgb(255, 94, 0);">Sign
+                    In</button>
+            </div>
+        </form>
+        <br>
+        <!-- <a herf="" style="color:rgb(255, 94, 0)">Forgot password</a>
+        <br>
+        <a herf="" style="color:rgb(255, 94, 0)">Terms of Use</a> -->
+        <app-store-lookup></app-store-lookup>
+    </mat-card>     
+   
+</div>

@@ -1,0 +1,22 @@
+<p>reactive-table works!</p>
+<div class="table-responsive">
+    <table mat-table [dataSource]="this.dataSource" matSort 
+       matTableFilter>
+      <ng-container *ngFor="let tableColumn of tableColumns" [matColumnDef]="tableColumn.name">
+        <ng-container *ngIf="tableColumn.isSortable; else notSortable" class="col-header">
+          <th mat-header-cell *matHeaderCellDef [mat-sort-header]="tableColumn.name" disableClear>
+            <!-- [disabled]="tableColumn.label === 'Report'" -->
+            {{ tableColumn.label }}
+          </th>
+        </ng-container>
+        <ng-template #notSortable>
+          <th mat-header-cell *matHeaderCellDef class="car">
+            {{ tableColumn.label }}
+          </th>
+        </ng-template>
+        <!-- column data -->
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns" @fadeInUp></tr>
+    </table>
+  </div>

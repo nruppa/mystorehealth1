@@ -1,0 +1,21 @@
+<div fxLayoutAlign="center center" fxFlexFill class="main">
+    <mat-card fxFlex="30" fxFlex.xs="95">
+        <mat-card-content>
+            <form [formGroup]="login">
+                <mat-form-field class="full-width">
+                    <mat-label>UserName</mat-label>
+                    <input matInput formControlName="username" placeholder="username">
+                    <mat-error *ngIf="login.controls.username.errors?.required && login.controls.username.touched">Name
+                        must be required</mat-error>
+                    <mat-error *ngIf="login.controls.username.errors?.pattern"> Enter characters only</mat-error></mat-form-field>
+                <mat-form-field class="full-width">
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput formControlName="password" />
+                    <mat-error *ngIf="login.controls.password.errors?.required">Enter password </mat-error>
+                    <mat-error *ngIf="login.controls.password.errors?.pattern">incorrect password </mat-error>
+                </mat-form-field>
+                <button mat-button (click)="submit(login.value)" routerLink="table" color="primary">submit</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

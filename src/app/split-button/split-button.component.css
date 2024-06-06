@@ -1,0 +1,10 @@
+
+.active {
+    background-color: #DCFCE7;
+    height: 54px;
+}
+
+.inactive {
+    height: 54px;
+    background-color: #fee2e2;
+}

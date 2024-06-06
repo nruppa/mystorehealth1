@@ -1,0 +1,39 @@
+<mat-card>
+    <!-- Color changes when we change the value it automaticaly changed related color of value -->
+    <div class="flex  gap-2 " fxLayoutAlign="center">
+        <p>split-button works!</p>
+        <mat-button-toggle-group [(ngModel)]="selectedValue">
+            <mat-button-toggle [ngClass]="className">{{selectedValue||'Active'}}</mat-button-toggle>
+            <mat-button-toggle [ngClass]="className" [matMenuTriggerFor]="dropdownMenuTwo">
+                <mat-icon>arrow_drop_down</mat-icon>
+            </mat-button-toggle>
+        </mat-button-toggle-group>
+        <mat-menu #dropdownMenuTwo="matMenu">
+            <button mat-menu-item *ngFor="let status of status"
+                (click)="selectedValue1(status)">{{status.value}}</button>
+        </mat-menu>
+    </div>
+
+    ====================================================================================================
+    <!-- Color changes when we change the value it automaticaly changed related color of value -->
+    <div fxLayoutAlign="center">
+        <p>dropdown</p>
+        <mat-form-field appearance="outline" [ngClass]="className">
+            <mat-select (selectionChange)="setBackground($event.value)">
+                <mat-option *ngFor="let status of status1, index" [value]="status.className">
+                    {{status.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    ========================================================================================================================================================================================================================
+    <!-- here change the value of selection and the it`s prints the value form related selection 
+                        and also trasfer the value form another component  -->
+    <div fxLayoutAlign="center">
+        <p>hfg</p>
+        {{statusdata}}
+    </div>
+    ========================================================================================================================================================================================================================
+
+</mat-card>

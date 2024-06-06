@@ -1,0 +1,60 @@
+<div class="w-full h-full flex flex-col">
+    <div class="px-gutter pt-5 pb-20 bg-[#E8F2F3] flex-none">
+        <div  class="flex flex-col justify-between p-3 lg:flex-row md:flex-row">
+            <h1 class="font-semibold max-w-3xs mr-6 text-2xl">
+                Export/Import
+            </h1>
+        </div>
+    </div>
+    <!-- <form  [formGroup]="formGroup" class="flex flex-col gap-5 pr-4 pl-4 -mt-16">
+        <mat-card>
+            <mat-card-header class="mb-3">
+                <mat-card-title class="text-xl">Export</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="flex flex-col gap-4 lg:flex-row md:flex-row">
+                    <mat-form-field appearance="outline" class="flex-auto">
+                        <mat-label>Warehouse</mat-label>
+                        <input matInput formControlName="warehouse" type="text" required />
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="flex-auto">
+                        <mat-label>Customer</mat-label>
+                        <input matInput formControlName="customer" type="text" required />
+                    </mat-form-field>
+
+                    <button mat-raised-button color="primary" class="m-3 py-px">
+                        <mat-icon>file_download</mat-icon>
+                        Extract Rate</button>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </form> -->
+    <div  class="flex flex-col gap-5 pr-4 pl-4 mt-5">
+        <mat-card>
+            <mat-card-header class="mb-3">
+                <mat-card-title class="text-xl">Import</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="custom-dropzone" #importfile ngx-dropzone [multiple]="false" accept=".xlsx"
+                    [maxFileSize]="10000000" (change)="onSelect($event)">
+                    <ngx-dropzone-label>
+                        <span class="flex flex-col items-center">
+                            <mat-icon class="icon">file_upload</mat-icon>
+                            <p class="text-lg ">Click to upload</p>
+                            <p class="text-sm decoration-8"> or drag and drop</p>
+                        </span>
+                    </ngx-dropzone-label>
+                    <ngx-dropzone-preview ngProjectAs="ngx-dropzone-preview" [removable]="true" *ngFor="let f of files"
+                        [file]="f" (removed)="onRemove(f)">
+                        <ngx-dropzone-label class="label">{{ f.name }}</ngx-dropzone-label>
+                    </ngx-dropzone-preview>
+                </div>
+            </mat-card-content>
+            <mat-card-actions class="justify-end">
+                <button mat-raised-button color="primary" (click)="onImportToExcel($event)">
+                    <mat-icon>upload</mat-icon>
+                    Import File
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>

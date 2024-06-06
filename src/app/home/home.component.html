@@ -1,0 +1,57 @@
+<mat-card class="full-width">
+    <div fxLayout="row" class="divs">
+        <div fxLayout="column" fxFlex="5" style="color:rgba(255, 255, 255, 0.678)" fxFlex.gt-sm="5" fxFlex.gt-xs="7"
+            fxFlex.xs="16" fxFlex.gt-md="3.5">
+            <h5>Welcome</h5>
+        </div>
+        <div fxLayout="column" fxFlex="4" style="color:white" fxFlex.md="5" fxFlex.gt-xs="7" fxFlex.xs="15"
+            fxFlex.gt-md="3.5">Rachel</div>
+        <div fxLayout="column" fxFlex="11" fxFlex.gt-xs="5" fxFlex.gt-xs="23.5" fxFlex.xs="57">
+            <form>
+                <!-- <mat-form-field class="example-full-width" > -->
+                <input type="text" matInput [formControl]="StoreNumber" [matAutocomplete]="auto">
+                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="change($event)">
+                    <mat-option *ngFor=" let option of options" [value]="option.StoreNumbers">
+                        {{option.StoreNumbers}}
+                    </mat-option>
+                </mat-autocomplete>
+                <!-- </mat-form-field> -->
+            </form>
+        </div>
+        <div fxLayout="row-reverse" fxFlex>
+            <marquee style="color:white;font-family:Rajdhani, sans-serif" scrolldelay="150" behavior="loop" direction="left">
+                {{items}}
+            </marquee>
+        </div>
+    </div>
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <button mat-button routerLink="/home" style="color:rgb(255, 136, 0)">
+                myStoreHealth
+            </button>
+            <!-- <div fxLayout="row">
+                <div fxLayout="row-reverse">
+                    <mat-icon matPrefix style="color: white;">notifications_none</mat-icon>
+                </div>
+                <div fxLayout="row-reverse">
+                    <mat-icon matPrefix style="color: white">feedback</mat-icon>
+                </div>
+                <div fxLayout="row-reverse">
+                    <mat-icon matPrefix style="color: white">logout</mat-icon>
+                </div>
+            </div> -->
+        </mat-toolbar-row>
+    </mat-toolbar>
+    &nbsp;
+    <router-outlet></router-outlet>
+</mat-card>
+
+
+<!-- <div class="footer">
+    <footer fxLayoutAlign="stretch" fxLayout="column">
+        footer
+    </footer>
+</div> -->
+
+
+<!-- fxFlex.gt-sm="5" fxFlex.gt-xs="7" fxFlex.xs="16" fxFlex.gt-md="6" -->

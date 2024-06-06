@@ -1,0 +1,39 @@
+/* .example-card {
+  } */
+
+.example-header-image {
+    background-size: cover;
+}
+
+.card {
+
+    height: 501px;
+    bottom: 48px;
+}
+
+.full-width {
+    width: 100%;
+    /* height: 60px; */
+}
+
+input {
+    height: 30px;
+}
+
+/* .font{
+    font: 24px/33px Roboto, "Helvetica Neue", sans-serif;
+    letter-spacing: normal;
+} */
+.font {
+    height: 50px;
+}
+
+.mdiv {
+    height: 133px;
+    ;
+}
+
+img {
+    width: 84px;
+    height: 83px;
+}

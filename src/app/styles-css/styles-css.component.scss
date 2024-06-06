@@ -1,0 +1,21 @@
+/* this is for changing the input field has to be disabled  */
+.input-disabled {
+    pointer-events: none;
+}
+
+
+// ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+//     color: pink;
+// }
+
+// ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-label {
+//     color: pink;
+// }
+
+// ::ng-deep.mat-form-field-appearance-fill {
+//     color: pink;
+// }
+
+// ::ng-deep.mat-form-field-appearance-fill.mat-focused .mat-form-field-label {
+//     color: pink;
+// }
