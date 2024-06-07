@@ -9,8 +9,6 @@ import { map, Observable, startWith } from 'rxjs';
 })
 export class AutocompleteComponent implements OnInit {
 
-  items = "Alter"
-
   constructor() { }
   myControl = new FormControl('');
   options: string[] = ['One', 'Two', 'Three'];
