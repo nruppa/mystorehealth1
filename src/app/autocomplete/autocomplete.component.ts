@@ -9,7 +9,7 @@ import { map, Observable, startWith } from 'rxjs';
 })
 export class AutocompleteComponent implements OnInit {
 
-  constructor() { }
+
   myControl = new FormControl('');
   options: string[] = ['One', 'Two', 'Three'];
   filteredOptions!: Observable<string[]>
