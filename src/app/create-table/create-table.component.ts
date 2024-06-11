@@ -12,7 +12,7 @@ import { TestService } from '../test.service';
 export class CreateTableComponent implements OnInit {
 
  
-  value: any;
+
   selected: any=[];
   formvalue: any = [];
   userdata: any = [];
