@@ -15,7 +15,6 @@ export class CreateTableComponent implements OnInit {
   value: any;
   selected: any=[];
   formvalue: any = [];
-  userdata: any = [];
   displayedColumns: string[] = ['username', 'password', 'dateofbirth', 'Address', 'Selectanfield','gender'];
   // dataSource: any=[];
   column = [
