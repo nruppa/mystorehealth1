@@ -18,11 +18,6 @@
 //   { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
 //   { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
 // ];
-// @Component({
-//   selector: 'app-searching',
-//   templateUrl: './searching.component.html',
-//   styleUrls: ['./searching.component.css']
-// })
 
 // export class SearchingComponent implements OnInit {
 
