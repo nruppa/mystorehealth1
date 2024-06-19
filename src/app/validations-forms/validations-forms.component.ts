@@ -23,10 +23,10 @@ export class ValidationsFormsComponent implements OnInit {
       Selectanfield: ['', Validators.required],
     })
   }
-  submit(data: any) {
-    console.log(data)
-    // this.test.esvsdata.next(data)
-  }
+  // submit(data: any) {
+  //   console.log(data)
+  //   // this.test.esvsdata.next(data)
+  // }
 
 
   addform(set:any)
