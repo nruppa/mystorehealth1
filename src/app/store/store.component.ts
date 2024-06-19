@@ -20,10 +20,6 @@ export class StoreComponent implements OnInit {
   ngOnInit() {
     this.res=this.active.snapshot.queryParamMap.get('data')
     console.log(this.res);
-    this.filteredOptions = this.myControl.valueChanges.pipe(
-      startWith(''),
-      map((value) => this._filter(value || '')),
-    );
   }
 
   private _filter(value: string): string[] {
