@@ -30,12 +30,7 @@ export class SplitButtonComponent implements OnInit {
   //   { value: 'APPROVED', viewValue: 'APPROVED', },
   //   { value: 'PENDINGAPPROVAL', viewValue: 'PENDINGAPPROVAL' },
   // ];
-  status1 = [
-      { value: 'ACTIVE', viewValue: 'ACTIVE', className: 'active' },
-      { value: 'INACTIVE', viewValue: 'INACTIVE', className: 'inactive' },
-      { value: 'APPROVED', viewValue: 'APPROVED', className: 'active' },
-      { value: 'PENDINGAPPROVAL', viewValue: 'PENDINGAPPROVAL', className: 'inactive' },
-    ];
+  status1 = [   ];
   ngOnInit() {
     if (this.router.url.includes('auto')) {
       this.status = [
