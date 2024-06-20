@@ -31,13 +31,6 @@
                     <mat-error *ngIf="sample.controls.Name.errors?.pattern">Enter characters only</mat-error>
                 </div>
                 <div fxLayout="column" fxFlex="24">
-                    <mat-label>Extension &nbsp;<span>#</span></mat-label>
-                    <input type="number" formControlName="Extension" />
-                    <!-- <mat-icon matPrefix>phone</mat-icon> -->
-                    <mat-error *ngIf="sample.controls.Extension.errors?.required && sample.controls.Extension.touched">
-                        Extension must be required</mat-error>
-                </div>
-                <div fxLayout="column" fxFlex="24">
                     <mat-label>Store Number<span>*</span></mat-label>
                     <input type="text" formControlName="StoreNumber" placeholder="ST0509-LAKELINE"
                         [matAutocomplete]="auto">
