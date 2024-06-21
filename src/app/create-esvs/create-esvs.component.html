@@ -19,12 +19,6 @@
                                 only</mat-error>
                         </mat-form-field>
                         <mat-form-field class="full-width">
-                            <mat-label>Password</mat-label>
-                            <input type="password" matInput formControlName="password" />
-                            <mat-error *ngIf="login.controls.password.errors?.required">Enter password </mat-error>
-                            <mat-error *ngIf="login.controls.password.errors?.pattern">incorrect password </mat-error>
-                        </mat-form-field>
-                        <mat-form-field class="full-width">
                             <mat-label>Date of Birth</mat-label>
                             <input matInput formControlName="dateofbirth" [matDatepicker]="picker"
                                 placeholder="Choose a date">
